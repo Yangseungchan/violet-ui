@@ -75,7 +75,15 @@
     "type": "git",
     "url": "https://github.com/yangseungchan/violet-ui"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "vanilla-extract",
+    "typescript",
+    "ui",
+    "components",
+    "frontend",
+    "library"
+  ],
   "author": "yangseungchan",
   "bugs": {
     "url": "https://github.com/yangseungchan/violet-ui/issues"
