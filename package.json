@@ -63,8 +63,14 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/violet-ui.es.js",
-      "require": "./dist/violet-ui.umd.js"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/violet-ui.es.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/violet-ui.umd.js"
+      }
     },
     "./style": {
       "import": "./dist/style.css",
