@@ -1,5 +1,5 @@
 {
-  "name": "violet-ui",
+  "name": "@violet-ui/dev",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
@@ -12,7 +12,7 @@
     "lint:fix": "eslint --fix 'src/**/*.{jsx,ts,tsx}'",
     "format": "prettier --write src/**/*.{ts,tsx,css} --config ./.prettierrc.json",
     "prepare": "husky install",
-    "publish": "npm publish"
+    "publish": "npm publish --access public"
   },
   "devDependencies": {
     "@types/node": "^18.16.1",
