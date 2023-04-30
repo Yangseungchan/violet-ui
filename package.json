@@ -73,7 +73,7 @@
   },
   "main": "./dist/violet-ui.umd.js",
   "module": "./dist/violet-ui.es.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/yangseungchan/violet-ui"
