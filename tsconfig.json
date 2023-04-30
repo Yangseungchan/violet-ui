@@ -19,7 +19,7 @@
     "declarationMap": true,
     "baseUrl": ".",
     "paths": {
-      "violet-ui": ["src/component/index.ts"]
+      "@violet-ui": ["src/component/index.ts"]
     },
     "typeRoots": ["node_modules/@types", "src/component/index.d.ts"]
   },
