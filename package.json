@@ -1,5 +1,5 @@
 {
-  "name": "@violet-ui/dev",
+  "name": "violet-ui-dev",
   "version": "0.0.2",
   "type": "module",
   "scripts": {
@@ -90,5 +90,9 @@
   },
   "homepage": "https://github.com/yangseungchan/violet-ui/#readme",
   "license": "MIT",
-  "packageManager": "yarn@3.5.0"
+  "packageManager": "yarn@3.5.0",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }

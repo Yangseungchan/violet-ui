@@ -1141,43 +1141,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@violet-ui/dev@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@violet-ui/dev@workspace:."
-  dependencies:
-    "@types/node": ^18.16.1
-    "@types/react": ^18.0.28
-    "@types/react-dom": ^18.0.11
-    "@typescript-eslint/eslint-plugin": latest
-    "@typescript-eslint/parser": latest
-    "@vanilla-extract/css": ^1.11.0
-    "@vanilla-extract/recipes": ^0.4.0
-    "@vanilla-extract/vite-plugin": ^3.8.0
-    "@vitejs/plugin-react": ^4.0.0
-    "@yarnpkg/sdks": ^3.0.0-rc.42
-    eslint: ^8.39.0
-    eslint-config-prettier: ^8.8.0
-    eslint-plugin-prettier: ^4.2.1
-    eslint-plugin-react: ^7.32.2
-    eslint-plugin-react-hooks: ^4.6.0
-    eslint-plugin-react-refresh: ^0.3.4
-    eslint-plugin-simple-import-sort: ^10.0.0
-    husky: ^8.0.3
-    lint-staged: ^13.2.2
-    prettier: ^2.8.8
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-hooks: ^1.0.1
-    typescript: ^5.0.4
-    vite: ^4.3.2
-    vite-plugin-eslint: ^1.8.1
-    vite-tsconfig-paths: ^4.2.0
-  peerDependencies:
-    react: ^18
-    react-dom: ^18
-  languageName: unknown
-  linkType: soft
-
 "@vitejs/plugin-react@npm:^4.0.0":
   version: 4.0.0
   resolution: "@vitejs/plugin-react@npm:4.0.0"
@@ -5077,6 +5040,43 @@ __metadata:
   checksum: 474acf1146cb2701fe3b074892217553dfcf9a031280919ba1b8d651a068c9b15d863b7303cb15bd00a862b498e6cf4ad7b4a08fb134edd5a6f7641681cb54a2
   languageName: node
   linkType: hard
+
+"violet-ui-dev@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "violet-ui-dev@workspace:."
+  dependencies:
+    "@types/node": ^18.16.1
+    "@types/react": ^18.0.28
+    "@types/react-dom": ^18.0.11
+    "@typescript-eslint/eslint-plugin": latest
+    "@typescript-eslint/parser": latest
+    "@vanilla-extract/css": ^1.11.0
+    "@vanilla-extract/recipes": ^0.4.0
+    "@vanilla-extract/vite-plugin": ^3.8.0
+    "@vitejs/plugin-react": ^4.0.0
+    "@yarnpkg/sdks": ^3.0.0-rc.42
+    eslint: ^8.39.0
+    eslint-config-prettier: ^8.8.0
+    eslint-plugin-prettier: ^4.2.1
+    eslint-plugin-react: ^7.32.2
+    eslint-plugin-react-hooks: ^4.6.0
+    eslint-plugin-react-refresh: ^0.3.4
+    eslint-plugin-simple-import-sort: ^10.0.0
+    husky: ^8.0.3
+    lint-staged: ^13.2.2
+    prettier: ^2.8.8
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-hooks: ^1.0.1
+    typescript: ^5.0.4
+    vite: ^4.3.2
+    vite-plugin-eslint: ^1.8.1
+    vite-tsconfig-paths: ^4.2.0
+  peerDependencies:
+    react: ^18
+    react-dom: ^18
+  languageName: unknown
+  linkType: soft
 
 "vite-node@npm:^0.28.5":
   version: 0.28.5
