@@ -16,12 +16,11 @@
     "declaration": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "declarationMap": true,
     "baseUrl": ".",
     "paths": {
       "violet-ui-dev": ["src/component/index.ts"]
     },
-    "typeRoots": ["node_modules/@types", "src/component/index.d.ts"]
+    "outDir": "./dist/types"
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
