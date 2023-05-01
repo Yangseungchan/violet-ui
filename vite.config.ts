@@ -30,5 +30,3 @@ export default defineConfig({
     port: 3000,
   },
 })
-
-// https://github.com/mirror-xyz/degen/blob/main/components/vite.config.ts
