@@ -19,6 +19,11 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [...Object.keys(pkg.peerDependencies)],
+      output: {
+        globals: {
+          react: 'React',
+        },
+      },
     },
   },
   server: {

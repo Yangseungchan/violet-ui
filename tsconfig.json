@@ -13,14 +13,16 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "declaration": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
-      "violet-ui-dev": ["src/component/index.ts"]
+      "@/*": ["src/*"],
+      "violet-ui-dev": ["src/index.ts"]
     },
-    "outDir": "./dist/types"
+    "declaration": true,
+    "outDir": "dist",
+    "declarationDir": "dist"
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
