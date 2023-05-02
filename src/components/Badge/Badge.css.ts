@@ -6,6 +6,7 @@ export const wrapper = recipe({
     textAlign: 'center',
     color: 'white',
     width: 'max-content',
+    fontSize: '14px',
   },
   variants: {
     color: {
@@ -14,7 +15,17 @@ export const wrapper = recipe({
     },
     shape: {
       squared: { borderRadius: '4px' },
-      rounded: { borderRadius: '12px' },
+      rounded: { borderRadius: '2rem' },
+    },
+    hoverable: {
+      true: {
+        transition: 'all 0.4s ease-in',
+        backgorund: 'red',
+        ':hover': {
+          WebkitFilter: 'brightness(0.8)',
+          cursor: 'pointer',
+        },
+      },
     },
   },
   defaultVariants: {

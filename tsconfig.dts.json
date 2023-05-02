@@ -7,5 +7,5 @@
     "outDir": "dist/types"
   },
   "include": ["src/components/*"],
-  "exclude": ["src/**/*.stories.tsx", "src/**/*.test.tsx", "src/**/*.spec.tsx"]
+  "exclude": ["src/stories/*", "src/**/*.stories.tsx", "src/**/*.test.tsx", "src/**/*.spec.tsx"]
 }
