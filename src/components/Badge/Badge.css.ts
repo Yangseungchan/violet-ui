@@ -20,7 +20,6 @@ export const wrapper = recipe({
     hoverable: {
       true: {
         transition: 'all 0.4s ease-in',
-        backgorund: 'red',
         ':hover': {
           WebkitFilter: 'brightness(0.8)',
           cursor: 'pointer',

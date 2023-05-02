@@ -1,4 +1,6 @@
+import { expect } from '@storybook/jest'
 import { Meta, StoryObj } from '@storybook/react'
+import { within } from '@storybook/testing-library'
 
 import { Badge } from '@/components'
 
@@ -20,7 +22,6 @@ export const Primary = {
   args: {
     children: 'Primary',
     color: 'primary',
-    hoverable: true,
   },
 } satisfies Story
 
@@ -42,5 +43,16 @@ export const Rounded = {
   args: {
     children: 'Secondary',
     shape: 'rounded',
+  },
+} satisfies Story
+
+export const Hoverable = {
+  args: {
+    children: 'Hoverable',
+    hoverable: true,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    expect(canvas.getByText('Hoverable')).toBeInTheDocument()
   },
 } satisfies Story

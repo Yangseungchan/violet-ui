@@ -12,6 +12,7 @@ module.exports = {
   },
   features: {
     storyStoreV7: true,
+    interactionDebugger: true,
   },
   docs: {
     autodocs: true,

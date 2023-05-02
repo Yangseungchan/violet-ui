@@ -12,7 +12,7 @@ const Badge = ({
   ...rest
 }: BadgeProps) => {
   return (
-    <div className={wrapper({ color, shape, hoverable })} {...rest}>
+    <div className={wrapper({ color, shape, hoverable })} {...rest} data-testid="badge">
       {children}
     </div>
   )
