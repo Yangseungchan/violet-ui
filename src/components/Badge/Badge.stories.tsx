@@ -1,11 +1,11 @@
-import { expect } from '@storybook/jest'
+import { expect, jest } from '@storybook/jest'
 import { Meta, StoryObj } from '@storybook/react'
-import { within } from '@storybook/testing-library'
+import { getByTestId, userEvent, within } from '@storybook/testing-library'
 
 import { Badge } from '@/components'
 
 const meta = {
-  title: 'Badge',
+  title: 'Atoms/Badge',
   component: Badge,
 } satisfies Meta<typeof Badge>
 
@@ -22,6 +22,12 @@ export const Primary = {
   args: {
     children: 'Primary',
     color: 'primary',
+    onClick: jest.fn(),
+  },
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement)
+    userEvent.click(canvas.getByText('Primary'))
+    expect(args.onClick).toHaveBeenCalled()
   },
 } satisfies Story
 
