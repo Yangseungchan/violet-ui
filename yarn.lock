@@ -1278,7 +1278,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.20.2, @babel/preset-env@npm:~7.21.0":
+"@babel/preset-env@npm:^7.20.2, @babel/preset-env@npm:^7.21.5, @babel/preset-env@npm:~7.21.0":
   version: 7.21.5
   resolution: "@babel/preset-env@npm:7.21.5"
   dependencies:
@@ -1408,7 +1408,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:^7.13.0, @babel/preset-typescript@npm:^7.18.6":
+"@babel/preset-typescript@npm:^7.13.0, @babel/preset-typescript@npm:^7.18.6, @babel/preset-typescript@npm:^7.21.5":
   version: 7.21.5
   resolution: "@babel/preset-typescript@npm:7.21.5"
   dependencies:
@@ -1943,7 +1943,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@istanbuljs/load-nyc-config@npm:^1.0.0":
+"@istanbuljs/load-nyc-config@npm:^1.0.0, @istanbuljs/load-nyc-config@npm:^1.1.0":
   version: 1.1.0
   resolution: "@istanbuljs/load-nyc-config@npm:1.1.0"
   dependencies:
@@ -2624,6 +2624,18 @@ __metadata:
     react-dom:
       optional: true
   checksum: 41afc588829259dcdac2d5aa99112a8d38c56f262a4b73e52d799b3db32dd0901d9a49a08ebc1e8cea61a73987ff83a66388f1b1736cbaa3b6eb33806ed0974a
+  languageName: node
+  linkType: hard
+
+"@storybook/addon-coverage@npm:^0.0.8":
+  version: 0.0.8
+  resolution: "@storybook/addon-coverage@npm:0.0.8"
+  dependencies:
+    "@types/babel__core": ^7.1.19
+    "@types/istanbul-lib-coverage": ^2.0.4
+    babel-plugin-istanbul: ^6.1.1
+    vite-plugin-istanbul: ^3.0.1
+  checksum: 8cf18a291699df1b630f77698abfd4d370dabfba55ae186e522b76b9bc76ce6a866cdd5d0e8c044dda135dd2873651d3ab9d2ddc93903222bdabf236ef64645e
   languageName: node
   linkType: hard
 
@@ -3588,6 +3600,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@testing-library/dom@npm:^9.0.0":
+  version: 9.2.0
+  resolution: "@testing-library/dom@npm:9.2.0"
+  dependencies:
+    "@babel/code-frame": ^7.10.4
+    "@babel/runtime": ^7.12.5
+    "@types/aria-query": ^5.0.1
+    aria-query: ^5.0.0
+    chalk: ^4.1.0
+    dom-accessibility-api: ^0.5.9
+    lz-string: ^1.5.0
+    pretty-format: ^27.0.2
+  checksum: b145f43cd06ff083012cf2503aff6ccba97ff80715fcb106fe64af690f5536557bf24d37b97e8d685bbe3803d7f71d685ce71426cb1b9e250c3611e4372dcfa9
+  languageName: node
+  linkType: hard
+
 "@testing-library/jest-dom@npm:^5.16.2":
   version: 5.16.5
   resolution: "@testing-library/jest-dom@npm:5.16.5"
@@ -3602,6 +3630,20 @@ __metadata:
     lodash: ^4.17.15
     redent: ^3.0.0
   checksum: 94911f901a8031f3e489d04ac057cb5373621230f5d92bed80e514e24b069fb58a3166d1dd86963e55f078a1bd999da595e2ab96ed95f452d477e272937d792a
+  languageName: node
+  linkType: hard
+
+"@testing-library/react@npm:^14.0.0":
+  version: 14.0.0
+  resolution: "@testing-library/react@npm:14.0.0"
+  dependencies:
+    "@babel/runtime": ^7.12.5
+    "@testing-library/dom": ^9.0.0
+    "@types/react-dom": ^18.0.0
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  checksum: 4a54c8f56cc4a39b50803205f84f06280bb76521d6d5d4b3b36651d760c7c7752ef142d857d52aaf4fad4848ed7a8be49afc793a5dda105955d2f8bef24901ac
   languageName: node
   linkType: hard
 
@@ -3630,7 +3672,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/babel__core@npm:^7.0.0, @types/babel__core@npm:^7.1.14":
+"@types/babel__core@npm:^7.0.0, @types/babel__core@npm:^7.1.14, @types/babel__core@npm:^7.1.19":
   version: 7.20.0
   resolution: "@types/babel__core@npm:7.20.0"
   dependencies:
@@ -3828,7 +3870,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/istanbul-lib-coverage@npm:*, @types/istanbul-lib-coverage@npm:^2.0.0, @types/istanbul-lib-coverage@npm:^2.0.1":
+"@types/istanbul-lib-coverage@npm:*, @types/istanbul-lib-coverage@npm:^2.0.0, @types/istanbul-lib-coverage@npm:^2.0.1, @types/istanbul-lib-coverage@npm:^2.0.4":
   version: 2.0.4
   resolution: "@types/istanbul-lib-coverage@npm:2.0.4"
   checksum: a25d7589ee65c94d31464c16b72a9dc81dfa0bea9d3e105ae03882d616e2a0712a9c101a599ec482d297c3591e16336962878cb3eb1a0a62d5b76d277a890ce7
@@ -3991,6 +4033,15 @@ __metadata:
   version: 1.2.4
   resolution: "@types/range-parser@npm:1.2.4"
   checksum: b7c0dfd5080a989d6c8bb0b6750fc0933d9acabeb476da6fe71d8bdf1ab65e37c136169d84148034802f48378ab94e3c37bb4ef7656b2bec2cb9c0f8d4146a95
+  languageName: node
+  linkType: hard
+
+"@types/react-dom@npm:^18.0.0":
+  version: 18.2.3
+  resolution: "@types/react-dom@npm:18.2.3"
+  dependencies:
+    "@types/react": "*"
+  checksum: 33520610ee36765dbee62bd7d4a448598f0dec6d3ba94a05ff066e239ae536d739cb3bc2cd5269884f57293a3983ce614182844c4489b6e3350015eb5a08dcc7
   languageName: node
   linkType: hard
 
@@ -4333,7 +4384,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vanilla-extract/integration@npm:^6.0.2":
+"@vanilla-extract/integration@npm:^6.0.2, @vanilla-extract/integration@npm:^6.2.0":
   version: 6.2.1
   resolution: "@vanilla-extract/integration@npm:6.2.1"
   dependencies:
@@ -4351,6 +4402,16 @@ __metadata:
     vite: ^4.1.4
     vite-node: ^0.28.5
   checksum: 28bda6804f09f6dd046fb3d3d2cc2f7b5a1143e476645d34a9e92eb9156f44d63200e1035932e8a76d4a77b5c20807907294476f6d7fc3b43e9f93670ff87953
+  languageName: node
+  linkType: hard
+
+"@vanilla-extract/jest-transform@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@vanilla-extract/jest-transform@npm:1.1.1"
+  dependencies:
+    "@vanilla-extract/integration": ^6.2.0
+    esbuild: 0.17.6
+  checksum: 98f88ddc2e9a618328adc3ed0c59e3426cee29ee1f3f3310fc21f7f46f6ccc1183d0adb6aa51eafdc2aaf8e6948b732bed676af0be7c566fd3374ad1c2861b6d
   languageName: node
   linkType: hard
 
@@ -5432,6 +5493,15 @@ __metadata:
   version: 1.0.30001481
   resolution: "caniuse-lite@npm:1.0.30001481"
   checksum: 8200a043c191b4fd4fe0beda37a58fd61869c895ab93f87bdd0420e5927453f48434d716ce9da8552ff6c3ecc4dcd1366354cda3a134f3cc844af741574a7cab
+  languageName: node
+  linkType: hard
+
+"chainsaw@npm:>=0.0.7 <0.1":
+  version: 0.0.9
+  resolution: "chainsaw@npm:0.0.9"
+  dependencies:
+    traverse: ">=0.3.0 <0.4"
+  checksum: 88d19956954f428e6a11d803c6bf608520c3f25974c400165ed6af9628015ef30c333658268dbcf42f2b4ce2cd263fe85b28adafc8a446d8e53ac4c3e25b5219
   languageName: node
   linkType: hard
 
@@ -8017,6 +8087,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hashish@npm:>=0.0.2 <0.1":
+  version: 0.0.4
+  resolution: "hashish@npm:0.0.4"
+  dependencies:
+    traverse: ">=0.2.4"
+  checksum: 8571cee91809661957dba8ae2ca605b1ab1e432b2781e6fc161ffb0caa55658075aecc14a518efe42a5597168dfab37cbdc2483d323851785f234b24b39455da
+  languageName: node
+  linkType: hard
+
 "homedir-polyfill@npm:^1.0.0":
   version: 1.0.3
   resolution: "homedir-polyfill@npm:1.0.3"
@@ -9843,7 +9922,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lz-string@npm:^1.4.4":
+"lz-string@npm:^1.4.4, lz-string@npm:^1.5.0":
   version: 1.5.0
   resolution: "lz-string@npm:1.5.0"
   bin:
@@ -10967,7 +11046,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright@npm:^1.14.0":
+"playwright@npm:^1.14.0, playwright@npm:^1.33.0":
   version: 1.33.0
   resolution: "playwright@npm:1.33.0"
   dependencies:
@@ -11628,6 +11707,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"remove@npm:^0.1.5":
+  version: 0.1.5
+  resolution: "remove@npm:0.1.5"
+  dependencies:
+    seq: ">= 0.3.5"
+  checksum: 5ee886cb3509e09e706789bc4a9014c1d20b0ee6d004db581b382f3a256a45888526e23b36ce441fbd96ba3ecc453a18785d1e0d4d10dddb8e2e118961f93d9f
+  languageName: node
+  linkType: hard
+
 "repeat-string@npm:^1.6.1":
   version: 1.6.1
   resolution: "repeat-string@npm:1.6.1"
@@ -12019,6 +12107,16 @@ __metadata:
     range-parser: ~1.2.1
     statuses: 2.0.1
   checksum: 74fc07ebb58566b87b078ec63e5a3e41ecd987e4272ba67b7467e86c6ad51bc6b0b0154133b6d8b08a2ddda360464f71382f7ef864700f34844a76c8027817a8
+  languageName: node
+  linkType: hard
+
+"seq@npm:>= 0.3.5":
+  version: 0.3.5
+  resolution: "seq@npm:0.3.5"
+  dependencies:
+    chainsaw: ">=0.0.7 <0.1"
+    hashish: ">=0.0.2 <0.1"
+  checksum: 5b35acaadbb39ba26879a4395fe931b76addd90fd8bbca0efed3a96c26ecd003be9bc65d7fbf42b98eeb604f216f2ed22f22b01555aa04208f832d5c9b15403b
   languageName: node
   linkType: hard
 
@@ -12763,6 +12861,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"traverse@npm:>=0.2.4":
+  version: 0.6.7
+  resolution: "traverse@npm:0.6.7"
+  checksum: 21018085ab72f717991597e12e2b52446962ed59df591502e4d7e1a709bc0a989f7c3d451aa7d882666ad0634f1546d696c5edecda1f2fc228777df7bb529a1e
+  languageName: node
+  linkType: hard
+
+"traverse@npm:>=0.3.0 <0.4":
+  version: 0.3.9
+  resolution: "traverse@npm:0.3.9"
+  checksum: 982982e4e249e9bbf063732a41fe5595939892758524bbef5d547c67cdf371b13af72b5434c6a61d88d4bb4351d6dabc6e22d832e0d16bc1bc684ef97a1cc59e
+  languageName: node
+  linkType: hard
+
 "tree-kill@npm:^1.2.2":
   version: 1.2.2
   resolution: "tree-kill@npm:1.2.2"
@@ -13244,9 +13356,13 @@ __metadata:
   resolution: "violet-ui-dev@workspace:."
   dependencies:
     "@babel/core": ^7.21.5
+    "@babel/preset-env": ^7.21.5
+    "@babel/preset-react": ^7.18.6
+    "@babel/preset-typescript": ^7.21.5
     "@mdx-js/react": ^1.6.22
     "@storybook/addon-a11y": ^7.0.7
     "@storybook/addon-actions": ^7.0.7
+    "@storybook/addon-coverage": ^0.0.8
     "@storybook/addon-docs": ^7.0.7
     "@storybook/addon-essentials": ^7.0.7
     "@storybook/addon-interactions": ^7.0.7
@@ -13258,6 +13374,7 @@ __metadata:
     "@storybook/react-vite": ^7.0.7
     "@storybook/test-runner": ^0.10.0
     "@storybook/testing-library": ^0.1.0
+    "@testing-library/react": ^14.0.0
     "@types/node": ^18.16.1
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
@@ -13265,6 +13382,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": latest
     "@typescript-eslint/parser": latest
     "@vanilla-extract/css": ^1.11.0
+    "@vanilla-extract/jest-transform": ^1.1.1
     "@vanilla-extract/recipes": ^0.4.0
     "@vanilla-extract/vite-plugin": ^3.8.0
     "@vitejs/plugin-react": ^4.0.0
@@ -13280,17 +13398,21 @@ __metadata:
     eslint-plugin-simple-import-sort: ^10.0.0
     eslint-plugin-storybook: ^0.6.11
     husky: ^8.0.3
+    jest-serializer-html: ^7.1.0
     lint-staged: ^13.2.2
+    playwright: ^1.33.0
     prettier: ^2.8.8
     react: ^18.2.0
     react-dom: ^18.2.0
     react-hooks: ^1.0.1
+    remove: ^0.1.5
     storybook: ^7.0.7
     typescript: ^5.0.4
     vite: ^4.3.2
     vite-plugin-eslint: ^1.8.1
     vite-tsconfig-paths: ^4.2.0
   peerDependencies:
+    classnames: ^2.3.2
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -13325,6 +13447,18 @@ __metadata:
     eslint: ">=7"
     vite: ">=2"
   checksum: 65598893e2063a287a690ae296ba1fc212ee50dbc810d396a6cda44ee60c6f400adb52fc4c4a5ff54a89c11100bbaaf43eada23c9a78654ab1717f097d78176f
+  languageName: node
+  linkType: hard
+
+"vite-plugin-istanbul@npm:^3.0.1":
+  version: 3.0.4
+  resolution: "vite-plugin-istanbul@npm:3.0.4"
+  dependencies:
+    "@istanbuljs/load-nyc-config": ^1.1.0
+    istanbul-lib-instrument: ^5.1.0
+    picocolors: ^1.0.0
+    test-exclude: ^6.0.0
+  checksum: 74fa99e2e2bded28ff6ba47bddf3cdd2eae04d37f2b6d257dcf5571c75f3433c6495fe94bba1f12acd0fc6046a6e83ea618b0547726ba68190bf292c7cb34695
   languageName: node
   linkType: hard
 

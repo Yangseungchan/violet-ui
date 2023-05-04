@@ -22,7 +22,8 @@
     },
     "declaration": true,
     "outDir": "dist",
-    "declarationDir": "dist"
+    "declarationDir": "dist",
+    "types": ["node", "testing-library__jest-dom"]
   },
   "include": ["src"],
   "exclude": ["src/stories"],
