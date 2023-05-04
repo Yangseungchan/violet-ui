@@ -6,6 +6,12 @@
     "emitDeclarationOnly": true,
     "outDir": "dist/types"
   },
-  "include": ["src/components/*"],
-  "exclude": ["src/stories/*", "src/**/*.stories.tsx", "src/**/*.test.tsx", "src/**/*.spec.tsx"]
+  "include": ["src/*"],
+  "exclude": [
+    "src/stories/*",
+    "src/**/*.stories.tsx",
+    "src/**/*.test.tsx",
+    "src/**/*.spec.tsx",
+    "src/**/*.stories.mdx"
+  ]
 }
