@@ -1,6 +1,6 @@
 import { expect, jest } from '@storybook/jest'
 import { Meta, StoryObj } from '@storybook/react'
-import { getByTestId, userEvent, within } from '@storybook/testing-library'
+import { userEvent, within } from '@storybook/testing-library'
 
 import { Badge } from '@/components'
 
@@ -62,3 +62,11 @@ export const Hoverable = {
     expect(canvas.getByText('Hoverable')).toBeInTheDocument()
   },
 } satisfies Story
+
+export const Outlined = {
+  args: {
+    children: 'Outlined',
+    variant: 'outlined',
+    color: 'primary',
+  },
+}

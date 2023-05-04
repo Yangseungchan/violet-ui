@@ -1,17 +1,27 @@
 import { recipe, RecipeVariants } from '@vanilla-extract/recipes'
 
+import { vars } from '@/styles/theme.css'
+
 export const wrapper = recipe({
   base: {
     padding: '6px 8px',
     textAlign: 'center',
     color: 'white',
     width: 'max-content',
-    fontSize: '14px',
+    border: '2px solid',
   },
   variants: {
     color: {
-      primary: { background: '#40407a' },
-      secondary: { background: '#706fd3' },
+      primary: {
+        background: vars.color.primary,
+        borderColor: vars.color.primary,
+        color: vars.color.primary,
+      },
+      secondary: {
+        background: vars.color.secondary,
+        borderColor: vars.color.secondary,
+        color: vars.color.secondary,
+      },
     },
     shape: {
       squared: { borderRadius: '4px' },
@@ -26,10 +36,19 @@ export const wrapper = recipe({
         },
       },
     },
+    variant: {
+      filled: {
+        color: 'white',
+      },
+      outlined: {
+        background: 'transparent',
+      },
+    },
   },
   defaultVariants: {
     color: 'primary',
     shape: 'squared',
+    variant: 'filled',
   },
 })
 
