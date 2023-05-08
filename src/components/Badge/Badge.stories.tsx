@@ -69,4 +69,4 @@ export const Outlined = {
     variant: 'outlined',
     color: 'primary',
   },
-}
+} satisfies Story

@@ -14,14 +14,21 @@ export default defineConfig({
     lib: {
       entry: resolve('src', 'components/index.ts'),
       name: 'violet-ui',
-      formats: ['es', 'umd'],
-      fileName: (format) => `violet-ui.${format}.js`,
+      formats: ['es', 'cjs'],
+      fileName: (format) => {
+        if (format === 'es') {
+          return `violet-ui.js`
+        } else {
+          return `violet-ui.${format}`
+        }
+      },
     },
     rollupOptions: {
       external: [...Object.keys(pkg.peerDependencies)],
       output: {
         globals: {
           react: 'React',
+          classnames: 'classNames',
         },
       },
     },

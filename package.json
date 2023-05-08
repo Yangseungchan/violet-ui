@@ -98,11 +98,11 @@
     ".": {
       "import": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/violet-ui.es.js"
+        "default": "./dist/violet-ui.js"
       },
       "require": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/violet-ui.umd.js"
+        "default": "./dist/violet-ui.cjs"
       }
     },
     "./style": {
@@ -110,8 +110,8 @@
       "require": "./dist/style.css"
     }
   },
-  "main": "./dist/violet-ui.umd.js",
-  "module": "./dist/violet-ui.es.js",
+  "main": "./dist/violet-ui.cjs",
+  "module": "./dist/violet-ui.js",
   "types": "./dist/types/index.d.ts",
   "repository": {
     "type": "git",
