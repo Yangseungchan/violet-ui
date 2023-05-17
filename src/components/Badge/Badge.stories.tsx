@@ -2,7 +2,7 @@ import { expect, jest } from '@storybook/jest'
 import { Meta, StoryObj } from '@storybook/react'
 import { userEvent, within } from '@storybook/testing-library'
 
-import { Badge } from './Badge'
+import { Badge } from '@/components'
 
 const meta = {
   title: 'Atoms/Badge',

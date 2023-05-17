@@ -30,4 +30,4 @@ const Badge = ({
   )
 }
 
-export { Badge, type BadgeProps }
+export default Badge

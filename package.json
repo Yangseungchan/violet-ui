@@ -4,8 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && yarn build-src && yarn build-dts",
-    "build-src": "vite build",
+    "build": "yarn build-src && yarn build-dts",
+    "build-src": "vite build --config vite.build.config.ts",
     "build-dts": "tsc --project tsconfig.dts.json",
     "preview": "vite preview",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
@@ -72,6 +72,7 @@
     "storybook": "^7.0.7",
     "typescript": "^5.0.4",
     "vite": "^4.3.2",
+    "vite-plugin-dts": "^2.3.0",
     "vite-plugin-eslint": "^1.8.1",
     "vite-tsconfig-paths": "^4.2.0"
   },
@@ -94,14 +95,15 @@
   "files": [
     "dist"
   ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/violet-ui.cjs",
+  "module": "./dist/violet-ui.js",
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/index.d.ts",
         "default": "./dist/violet-ui.js"
       },
       "require": {
-        "types": "./dist/index.d.ts",
         "default": "./dist/violet-ui.cjs"
       }
     },
@@ -110,9 +112,6 @@
       "require": "./dist/style.css"
     }
   },
-  "main": "./dist/violet-ui.cjs",
-  "module": "./dist/violet-ui.js",
-  "types": "./dist/types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/yangseungchan/violet-ui"
@@ -132,12 +131,9 @@
   },
   "homepage": "https://github.com/yangseungchan/violet-ui/#readme",
   "license": "MIT",
-  "packageManager": "yarn@3.5.0",
+  "packageManager": "yarn@3.5.1",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  },
-  "dependencies": {
-    "remove": "^0.1.5"
   }
 }
