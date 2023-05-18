@@ -4,27 +4,56 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && yarn build-src && yarn build-dts",
-    "build-src": "vite build",
+    "build": "yarn build-src && yarn build-dts",
+    "build-src": "vite build --config vite.build.config.ts",
     "build-dts": "tsc --project tsconfig.dts.json",
     "preview": "vite preview",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "eslint --fix 'src/**/*.{jsx,ts,tsx}'",
     "format": "prettier --write src/**/*.{ts,tsx,css} --config ./.prettierrc.json",
     "prepare": "husky install",
-    "publish": "npm publish --access public"
+    "publish": "npm publish --access public",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test-storybook-dev": "test-storybook --verbose --watch --coverage",
+    "test-storybook": "test-storybook --coverage"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.5",
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.21.5",
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-a11y": "^7.0.7",
+    "@storybook/addon-actions": "^7.0.7",
+    "@storybook/addon-coverage": "^0.0.8",
+    "@storybook/addon-docs": "^7.0.7",
+    "@storybook/addon-essentials": "^7.0.7",
+    "@storybook/addon-interactions": "^7.0.7",
+    "@storybook/addon-jest": "^7.0.7",
+    "@storybook/addon-links": "^7.0.7",
+    "@storybook/cli": "^7.0.7",
+    "@storybook/jest": "^0.1.0",
+    "@storybook/react": "^7.0.7",
+    "@storybook/react-vite": "^7.0.7",
+    "@storybook/test-runner": "^0.10.0",
+    "@storybook/testing-library": "^0.1.0",
+    "@testing-library/react": "^14.0.0",
     "@types/node": "^18.16.1",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@types/testing-library__jest-dom": "^5.14.5",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "@vanilla-extract/css": "^1.11.0",
+    "@vanilla-extract/jest-transform": "^1.1.1",
     "@vanilla-extract/recipes": "^0.4.0",
     "@vanilla-extract/vite-plugin": "^3.8.0",
     "@vitejs/plugin-react": "^4.0.0",
     "@yarnpkg/sdks": "^3.0.0-rc.42",
+    "babel-loader": "^8.3.0",
+    "chromatic": "^6.17.4",
+    "classnames": "^2.3.2",
     "eslint": "^8.39.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -32,18 +61,24 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-storybook": "^0.6.11",
     "husky": "^8.0.3",
+    "jest-serializer-html": "^7.1.0",
     "lint-staged": "^13.2.2",
+    "playwright": "^1.33.0",
     "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hooks": "^1.0.1",
+    "storybook": "^7.0.7",
     "typescript": "^5.0.4",
     "vite": "^4.3.2",
+    "vite-plugin-dts": "^2.3.0",
     "vite-plugin-eslint": "^1.8.1",
     "vite-tsconfig-paths": "^4.2.0"
   },
   "peerDependencies": {
+    "classnames": "^2.3.2",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -61,15 +96,16 @@
   "files": [
     "dist"
   ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/violet-ui.cjs",
+  "module": "./dist/violet-ui.js",
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/violet-ui.es.js"
+        "default": "./dist/violet-ui.js"
       },
       "require": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/violet-ui.umd.js"
+        "default": "./dist/violet-ui.cjs"
       }
     },
     "./style": {
@@ -77,12 +113,9 @@
       "require": "./dist/style.css"
     }
   },
-  "main": "./dist/violet-ui.umd.js",
-  "module": "./dist/violet-ui.es.js",
-  "types": "./dist/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yangseungchan/violet-ui"
+    "url": "git+https://github.com/yangseungchan/violet-ui.git"
   },
   "keywords": [
     "react",
@@ -93,15 +126,19 @@
     "frontend",
     "library"
   ],
-  "author": "yangseungchan",
+  "author": {
+    "name": "yangseungchan"
+  },
   "bugs": {
     "url": "https://github.com/yangseungchan/violet-ui/issues"
   },
   "homepage": "https://github.com/yangseungchan/violet-ui/#readme",
   "license": "MIT",
-  "packageManager": "yarn@3.5.0",
+  "packageManager": "yarn@3.5.1",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "violet-ui-dev@0.0.7"
 }

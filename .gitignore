@@ -31,3 +31,6 @@ dist-ssr
 !.yarn/versions
 .pnp.*
 
+src/stories
+coverage
+storybook-static

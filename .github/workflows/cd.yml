@@ -1,0 +1,48 @@
+name: Merge CD
+run-name: ${{ github.actor }}가 실행함
+on:
+  push:
+    branches:
+      - master
+  
+jobs:
+  deploy-and-change-url:
+    permissions:
+      contents: write
+      repository-projects: write
+    runs-on: ubuntu-20.04
+    outputs: 
+      status: ${{ job.status }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: nodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: cache yarn
+        uses: actions/cache@v3
+        id: cache
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock ') }}
+
+      - name: dependency install
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn install
+        
+      - name: chromatic
+        id: chromatic
+        uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: change url
+        run: gh repo edit --homepage ${{ steps.chromatic.outputs.storybookUrl }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.VIOLET_GITHUB_TOKEN }}
