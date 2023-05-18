@@ -7,13 +7,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: nodeJS
+        uses: actions/setup-node@v3
         with:
           node-version: 18.x
           registry-url: https://registry.npmjs.org/
-      - run: yarn
-      - run: yarn build
+
+      - name: cache yarn
+        uses: actions/cache@v3
+        id: cache
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock ') }}
+
+      - name: dependency install
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn install
+
+      - name: package build
+        run: yarn build
+
       - run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
