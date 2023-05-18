@@ -29,6 +29,9 @@ jobs:
       - name: dependency install
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install
+        
+      - name: Install Playwright
+        run: npx playwright install --with-deps
       
       - name: build storybook
         run: yarn build-storybook --quiet
