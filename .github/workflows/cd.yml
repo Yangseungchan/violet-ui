@@ -22,14 +22,14 @@ jobs:
       - name: dependency install
         run: yarn install
         
-      - name: chromatic:
+      - name: chromatic
         id: chromatic
         uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: changeurl:
+      - name: changeurl
         run: gh repo edit --homepage ${{ steps.chromatic.outputs.storybookUrl }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
