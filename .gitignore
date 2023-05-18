@@ -33,3 +33,4 @@ dist-ssr
 
 src/stories
 coverage
+storybook-static
