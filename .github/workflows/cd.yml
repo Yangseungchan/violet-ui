@@ -1,7 +1,7 @@
 name: Merge CD
 run-name: ${{ github.actor }}가 실행함
 on:
-  pull_request:
+  push:
     branches:
       - master
   
