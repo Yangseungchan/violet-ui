@@ -1,6 +1,6 @@
 {
   "name": "violet-ui-dev",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -141,6 +141,5 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "readme": "ERROR: No README data found!",
-  "_id": "violet-ui-dev@0.0.7"
+  "readme": "ERROR: No README data found!"
 }
