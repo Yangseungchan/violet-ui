@@ -18,8 +18,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+      
+      - name: cache yarn
+        uses: actions/cache@v3
+        id: cache
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock ') }}
 
       - name: dependency install
+        if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install
       
       - name: build storybook
